@@ -1,0 +1,547 @@
+\documentclass[12pt]{article} \title{ Persuasive Essay Annotation
+  Guide [DRAFT]}
+
+\usepackage{geometry} \geometry{margin=1in}
+
+\usepackage{tabularx} % nice table formatting
+\usepackage{hyperref} \usepackage{backref}
+
+\begin{document}
+\maketitle
+\label{toc}
+\tableofcontents
+
+\newpage
+
+\section{Annotation Procedure}
+\label{sec:annotation-procedure}
+Annotation should be performed in a bottom-up/depth-first manner.
+\begin{enumerate}
+\item Read through the essay for comprehension and a holistic
+  understanding of its persuasiveness.
+\item For the first Claim, annotate all bottom-level Premises
+  (Premises not supported by other Premises). For each Premise:
+  \begin{enumerate}
+  \item Annotate the Eloquence, Specificity, and PremiseType.
+  \item Reread the parent entity and assign a Relevance score.
+  \item Score the persuasiveness contribution of the Premise.
+  \end{enumerate}
+\item Annotate all Premises that are completely supported by other fully
+  annotated Premises.
+\item Repeat until all Premises of the first Claim are annotated.  
+\item Annotate the first Claim.
+  \begin{enumerate}
+  \item Review the supporting Premises and their attributes.
+  \item Score the Specificity, Evidence, and whether or not the author
+    uses Logos, Pathos, or Ethos in the argument.
+  \item Annotate the ClaimType and Eloquence.
+  \item Score the Persuasiveness.
+  \item Reread the MajorClaims and assign a Relevance score.
+  \end{enumerate}
+  % \begin{enumerate}
+  % \item Annotate the Eloquence
+  % \end{enumerate}
+\item Repeat steps 2--5 for the remaining Claims.
+\item Annotate the MajorClaims. For each MajorClaim:
+  \begin{enumerate}
+  \item Review the supporting Claims and their attributes.
+  \item Assign an Evidence score.
+  \item Determine whether or not the argument uses Logos, Pathos, or
+    Ethos in the argument.
+  \item Score the Specificity.
+  \item Assign an Eloquence score
+  \item Score the Persuasiveness.
+  \end{enumerate}
+  
+\end{enumerate}
+
+\section{Attributes Summary}
+\label{sec:attributes-summary}
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Name & Description \\ \hline % Entities & Desc. \\ \hline
+  Persuasiveness:
+       & The general persuasiveness of the argument. If the entity is a
+         Premise, the Persuasiveness score indicates the
+         contribution made to the parent argument. \\ \hline % & x & x & x \\ \hline
+       & (1--6; Claim, MajorClaim, Premise) \\ \hline % & & & \\ \hline
+       & Depends on: PremiseType, Ethos/Pathos/Logos, Relevance, Eloquence, Specificity\\ \hline
+  Relevance:
+       & The relevance of the statement to the parent entity. \\ \hline
+       & (1--6; Claim, Premise)\\ \hline
+       & Depends on: Eloquence and Specificity of Child and Parent entities, text \\ \hline
+  PremiseType:
+       & The type of Premise, e.g. statistics, definition, real
+         example, etc. \\ \hline
+       & (see section~\ref{sec:premise-type}; Premise)\\ \hline
+       & Depends on: text \\ \hline
+  Logos/Pathos/Ethos:
+       & Whether or not the argument uses the respective persuasive strategy \\ \hline
+       & (yes,no; MajorClaim, Claim) \\ \hline
+       & Depends on: text, child entities\\ \hline
+  Evidence:
+       & The holistic summary of the supporting statements making
+         up the argument body of that specific entity \\ \hline
+       & (1--6; Claim, MajorClaim) \\ \hline
+       & Depends on: child entities \\ \hline 
+  ClaimType:
+       & The category of what is being claimed \\
+       & (Value, Fact, Policy; Claim) \\ \hline
+       & Depends on: Text \\ \hline
+  Specificity:
+       & How detailed and specific the statement is.\\ \hline
+       & (1--5; Claim, MajorClaim, Premise) \\ \hline
+       & Depends on: Text \\ \hline
+  Eloquence:
+       & How well the idea is presented. Influenced by grammar,
+         vocabulary, and sentence structure. \\ \hline 
+       & (1--5; Premise) \\ \hline
+       & Depends on: Text \\ \hline
+\end{tabularx}
+
+\section{Entity Summary}
+\label{sec:entity-summary}
+\begin{tabularx}{\textwidth}{r X}
+  
+  \textbf{MajorClaim} - & Persuasiveness, Logos/Pathos/Ethos, Evidence,
+                          Eloquence, Specificity \\
+  \textbf{Claim} - & Persuasiveness, ClaimType, Relevance, Logos/Pathos/Ethos, Evidence,
+                     Eloquence, Specificity \\
+  \textbf{Premise} - & Persuasiveness, PremiseType, Relevance,
+                       Eloquence, Specificity \\
+\end{tabularx}
+
+\pagebreak
+
+\section{Eloquence}
+\label{sec:eloquence}
+
+Eloquence Score descriptions
+% TODO: Provide example statements
+
+% TODO: Grammatical errors are not the only factor. Include vocabulary
+% and readability in every score descriptor
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Score & Description \\ \hline
+  5 & Demonstrates mastery of the English language. There are no
+      grammatical errors that distract from the meaning of the
+      sentence. Exhibits a well thought out, flowing sentence
+      structure that is easy to read and conveys the idea
+      exceptionally well.\\ \hline
+  {} & Ex: Contrary to the past when people had to wait long hours to
+       take a daily newspaper, nowadays, they can acquire latest news
+       updated every second through their mobile phones or computers
+       connected to the internet, everywhere and at anytime \\ \hline 
+  4 & Demonstrates fluency in English. If there are any grammatical or
+      syntactical errors, their affect on the meaning is
+      negligible. Word choice suggests a broad vocabulary.\\ \hline 
+  {} & Ex:  \\ \hline
+  3 & Demonstrates competence in the English language. There might be one
+      or two errors that are noticeable but forgivable, such as an
+      incorrect verb tense or unnecessary pluralization. Demonstrates
+      a typical vocabulary and a simple sentence structure.\\ \hline 
+  {} & Ex:  \\ \hline
+  2 & Demonstrates poor understanding of sentence composition and/or poor
+      vocabulary. The choice of words or grammatical errors force the
+      reader to reread the sentence before moving on. \\ \hline 
+  {} & Ex:  \\ \hline
+  1 & Demonstrates minimal eloquence. The sentence contains errors
+      so severe that the sentence must be carefully analyzed to
+      deduce its meaning.\\ 
+  \hline
+  {} & Ex:  Health education will help people to have right choices
+       of treatment to recover more quickly \\ \hline
+\end{tabularx}
+
+\pagebreak
+
+\section{Specificity}
+\label{sec:specificity}
+Specificity score descriptions and examples.
+% TODO: fit table on one page
+
+\subsection{Premise Specificity}
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Score & Description \\
+  \hline
+  5 & A score of 5 indicates an elaborate, very specific
+      statement. The statement contains numerical data, or a
+      historical example from the real world. There
+      is both:
+      \begin{itemize}
+        \itemsep-3mm
+      \item a sufficient qualifier indicating a the extent to which
+        the statement holds true
+      \item an explanation of why the statement is true
+      \end{itemize}
+      or:
+      \begin{itemize}
+      \item at least one real world example
+      \end{itemize}
+      or:
+      \begin{itemize}
+      \item a sufficient description of a hypothetical situation that
+        would evoke a mental image of the situation in the minds of
+        most readers
+      \end{itemize}
+  \\
+  \hline {} & Ex: Take Thailand for example, in the Vietnam War, many
+              American soldiers came to Thailand for a break and
+              involved in sexual and drug activities, these huge
+              demands caused many local businesses opened and
+              expanded, even illegally involved
+              in under-age prostitutes to maximize their profits. \\
+  \hline 4 & A score of 4 indicates a more specific statement. It is
+             characterized by either an explanation of why the
+             statement is true, or a qualifier indicating when/to what
+             extent the statement is true. Alternatively, it may list
+             examples of items that do not qualify as historical events.\\
+  \hline {} & Ex: Compared to the peers studying in the home country,
+              it will be more likely for the one who is living
+              overseas to be successful in adapting himself/herself
+              into new environments
+              and situations in life \\
+  \hline {} & Ex: Before email and mobile phone, human beings
+              communicated by meeting directly, sending letters or
+              later, calling from home phones  \\
+  \hline 3 & A score of 3 indicates a sufficiently specific
+             statement. It simply states a relationship or a fact with
+             little ambiguity.  \\ 
+  \hline {} & Ex: employers are mostly looking for people who have
+              international and language skills \\
+  \hline {} & Ex: They can learn about their way of thinking, their
+              customs
+              and traditions, and way of life. \\
+  \hline 2 & A broad statement. A statement with weak qualifiers such
+             as ``maybe,'' ``might,'' and ``sometimes,'' will receive
+             a score of 2 without other redeeming factors such as
+             explicit examples, or elaborate reasoning. Additionally,
+             there are few adjectives
+             or adverbs. \\
+  \hline
+  {} & Ex: students might face many challenges in the host country\\
+  \hline 1 & An extremely broad statement. There is no underlying
+             explanation, qualifiers, or real-world examples. \\
+  \hline
+  {} & Ex: Learning about others' cultures is so important. \\
+  \hline
+\end{tabularx}
+
+\subsection{Claim/MajorClaim Specificity}
+
+% TODO: provide examples
+% TODO: assign blame to low clarity/eloquence/specificity
+% Low child relevance with high specificity assigns blame to child
+% entities
+
+% Low child relevance with low specificity assigns blame to parent entity
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Score & Description \\ \hline
+  5 & Summarizes the argument well and has a qualifier that
+      indicates the extent to which the claim holds true. Claims that
+      summarize the argument well must reference most or all of the
+      supporting entities. \\ \hline
+  4 & A Claim that scores a 4 must summarize the argument very well by
+      mentioning most or all of the supporting entities, but does not
+      have a qualifier indicating the conditions under which the claim
+      holds true. Alternatively, the Claim may moderately summarize
+      the argument by referencing a minority of supporting entities and
+      contain qualifier. \\ \hline 
+  3 & A Claim with specificity 3 has a qualifier clause or references
+      a minority of the supporting entities, but not both. \\
+  \hline
+  2 & A Claim with specificity 2 does not make an attempt to summarize
+      the argument nor does it contain a qualifier clause. \\ \hline
+  1 & Simply rephrases the Majorclaim or is outside scope of the Majorclaim (entities were annotated incorrectly: Majorclaim could be used to support Claim). \\ \hline
+\end{tabularx}
+\noindent
+Note: A MajorClaim cannot receive a score of 1. \\
+\noindent
+Note: Some MajorClaims have an argument summary labeled as an
+independent claim with no supporting attributes.
+\pagebreak
+
+\section{Premise Type}
+\label{sec:premise-type}
+
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Type & Description \\ \hline
+  real\_example & A historical example of something that actually
+                  happened, or a specific, non-generic, statement that is verifiably true
+                  about the real world.\\ \hline
+  {} & Ex: \\ \hline
+  {} & Ex: \\ \hline
+  invented\_instance & A hypothetical situation that did not actually occur.\\ \hline
+  {} & Ex: Take Olympic games which is a form of competition for
+       instance, it is hard to imagine how an athlete could win the
+       game without the training of his or her coach, and the help of
+       other professional staffs such as the people who take care of
+       his diet, and those who are in charge of the medical care \\
+  \hline 
+  analogy &  \\ \hline
+  testimony & A quote from, or reference to a higher authority. \\ \hline
+  statistics & Raw numerical data or a quantitative comparison of
+               values.\\ \hline 
+  definition & An explicit definition of a term/concept.\\ \hline
+  common\_knowledge & A conjecture or generalization that the author
+                      assumes most people would accept as true. \\
+  \hline 
+  warrant & Performs one of the following functions:
+            \begin{itemize} 
+            \item Restates the parent claim
+            \item expands/upon clarifies the parent claim
+            \item explains how a sibling premise relates to the parent
+              claim.
+            \end{itemize}
+  \\ \hline
+  opinion & A controversial
+            statement that would be unanimously accepted as an
+            opinion. Could easily be the thesis of its own persuasive
+            essay. \\ \hline
+\end{tabularx}
+
+\pagebreak
+
+\section{Claim Type}
+\label{sec:claimtype}
+% TODO add examples
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Type & Description \\ \hline
+  Fact & The claim states that something is true or false. \\ \hline
+  {} & Ex: \\ \hline
+  Value & The claim states that something is important, or not
+          important, or has some other value attached to it. \\ \hline
+  {} & Ex: \\ \hline
+  Policy & The claim states that a certain law or rule should be
+           implemented and enforced. \\ \hline
+  {} & Ex: \\ \hline
+\end{tabularx}
+
+\pagebreak
+
+\section{Relevance}
+\label{sec:relevance}
+Relevance score descriptions.\\
+% TODO: Assign blame to unclear parent or child entity
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Score &  Description \\ \hline
+  6 & Anyone can see how the support relates to the parent claim. The
+      relationship between the two entities is either explicit or
+      extremely easy to infer. The relationship is thoroughly
+      explained in the text because the two entities contain the same
+      words or exhibit coreference.\\
+      \hline
+  {} & Premises that are paired with a warrant
+       sufficiently explaining the relationship to the parent claim (and the
+       warrant itself) score a 6. If the warrant does a poor job of
+       this, then the Premise and the Warrant receive the same, lower score.
+       % If the entity in
+       % question and its parent entity both have high clarity scores, so
+       % it is easy to see how they relate.
+  \\ \hline 
+  5 & There is an implied relationship that is obvious, but it could
+      be improved upon to remove all doubt. If the relationship is
+      obvious, both relating entities must have high eloquence and specificity
+      scores. \\ \hline  
+  4 & The relationship is fairly clear. The relationship can be
+      inferred from the context of the two statements. One entity must
+      have a high eloquence and specificity scores and the other must have lower but
+      sufficient eloquence and specificity scores for the relationship
+      to be fairly clear.\\ \hline 
+  3 & Somewhat related. It takes some thinking to imagine how the
+      entities relate. The parent entity or the child entity have low
+      clarity scores. Two statements about the same topic but unrelated
+      ideas within the domain of said topic would get a score of 3. \\ \hline  
+  2 & Mostly unrelated. It takes some major assumptions to relate the
+      two entities.  An
+      entity may also receive this score if both entities have low
+      clarity scores.\\ \hline  
+  1 & Totally unrelated. Very few people could see how the two
+      entities relate to each other. The statement was annotated to
+      show that it relates to the claim, but this was clearly in
+      error.\\ \hline
+\end{tabularx}
+
+\pagebreak
+
+\section{Persuasiveness}
+\label{sec:persuasiveness}
+Argument strength score descriptions.\\
+% TODO: Explain relationship between persuasiveness and other attributes}
+% TODO: Explain meaning of ``persuasiveness'' w.r.t. premises
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|}
+  \hline
+  Score & Description \\ \hline
+  6 & A very strong, clear argument.  It would persuade
+      most readers and is devoid of errors that might detract from its
+      strength or make it difficult to understand. \\ \hline
+  Claim/MajorClaim  &  \\ \hline
+  Premise & \\ \hline
+  5 & A strong, pretty clear argument.  It would persuade
+      most readers, but may contain some minor errors that detract from
+      its strength or understandability. \\ \hline
+  Claim/MajorClaim  &  \\ \hline
+  Premise & \\ \hline
+  4 & A decent, fairly clear argument.  It could persuade
+      some readers, but contains errors that detract from its strength
+      or understandability. \\ \hline
+  Claim/MajorClaim & 
+  \\ \hline
+  Premise & \\ \hline
+  3 & A poor, understandable argument.  It might persuade
+      readers who are already inclined to agree with it, but contains
+      severe errors that detract from its strength or
+      understandability. \\ \hline
+  Claim/MajorClaim  & 
+  \\ \hline
+  Premise & \\ \hline
+  2 & It is unclear what the author is trying to
+      argue or the argument is poor and just so riddled with errors as
+      to be completely unpersuasive. \\ \hline
+  Claim/MajorClaim  & 
+  \\ \hline 
+  Premise & \\ \hline
+  1 & The author doesn't appear to make any argument 
+      (e.g. he may just describe some incident without explaining why
+      it is important).  It could not persuade any readers because
+      there is nothing to be persuaded of.  It may or may not contain
+      detectable errors, but errors are moot since there is not an
+      argument for them to interfere with. \\ \hline
+  Claim/MajorClaim;  &  \\ \hline
+  Premise & \\ \hline
+\end{tabularx}
+Note: Persuasiveness is a property specific to arguments. Premises and
+claims by themselves do not constitute arguments, so the
+``persuasiveness'' attribute has a slightly different meaning than the
+name implies. With respect to claims and majorclaims, the
+``persuasiveness'' score refers to the argument corresponding to the
+claim.
+
+
+
+\pagebreak
+
+\section{Evidence}
+\label{sec:evidence}
+% TODO: explain how eloquence affects evidence
+6 - Indicates a very strong, very persuasive argument body. There are
+many supporting entities that have high relevance scores.
+
+There may be a few  attacking child entities. These entities
+must be used for either
+\begin{itemize}
+\item Concession: acknowledging valid points on the opposing side
+  
+  A child entity successfully used for a concession will itself have a
+  strong Persuasiveness score. An entity will have a high Evidence
+  score if there is a small number of concessions with good
+  persuasiveness. These concessions do not significantly detract from
+  the original arguments strength. They enhance persuasiveness by
+  revealing the author's knowledge of the subject and show that the
+  author is aware that the Claim/MajorClaim may not be absolute due
+  to the complexity and subjectivity of the real world.
+\item Refuting Counterarguments: anticipating potential
+  counterarguments and explaining why they are not valid
+  
+  An entity containing successfully refuted child entities that attack
+  the Claim/MajorClaim can receive an Evidence score of 6. If
+  successfully refuted, the opposing child entities will have a low
+  Persuasiveness score. If the opposing child entities are unrefuted
+  and carry persuasive power, they will detract
+   
+\end{itemize}
+The entities must perform one of the above functions as opposed to
+making the argument indecisive or contradictory. Only then can the
+Evidence score a 6.
+\begin{itemize}
+\item \textit{MajorClaim} \\ This score implies a high quantity of
+  supporting claims with high persuasiveness and relevance
+  scores. There are no attacking claims, or there are few attacking
+  claims with low persuasiveness, for the purpose of refuting potential
+  counterarguments.
+\item \textit{Claim} \\ This means a diverse selection of high-quality
+  premise types (e.g. real example, statistics, etc.) and high
+  relevance. There might be one "opinion" premise type or a premise
+  with low relevance, but the argument body is still strong
+  regardless.
+\end{itemize}
+5 - Indicates a strong, persuasive argument body. There are sufficient
+supporting entities with respectable scores.
+\begin{itemize}
+\item \textit{MajorClaim} \\ Indicates supporting entities for this
+  argument have high relevance and high persuasive scores. There may
+  be a conflicting claim, but its score is so low that it does not
+  hurt the persuasiveness of the MajorClaim in question.
+\item \textit{Claim} \\ There are numerous high quality
+  premises. PremiseTypes are mostly homogeneous and are not varied.
+  There might be enough premises with low relevance to distract from
+  the subject, thereby detracting from the persuasiveness.
+\end{itemize}
+4 - Indicates a decent, fairly persuasive argument body.
+\begin{itemize}
+\item \textit{MajorClaim} \\ There is a sufficient number of
+  supporting claims to create a persuasive argument. The supporting
+  claims have high relevance scores, and decent persuasiveness on
+  their own. There might be a few strongly persuasive claims that take
+  a stance against the MajorClaim.
+\item \textit{Claim} \\ There is a small number of premises with
+  strong premise types and high relevance. Or maybe there are many
+  premises with too many low quality premises to be considered a very
+  strong, persuasive argument.
+\end{itemize}
+3 - Indicates a poor, possibly persuasive argument body.
+\begin{itemize}
+\item \textit{MajorClaim} \\ The supporting claims were unpersuasive
+  and/or received low relevance scores. A MajorClaim that would have
+  otherwise received a 5 or 6 can get reduced to a 3 if the strength
+  of the claims against it approach the strength of those supporting
+  it.
+\item \textit{Claim} \\ A claim with an Evidence score of 3 means that
+  there is a mix of persuasive premise types with decent relevance,
+  and premise types that are weak with low relevance.
+\end{itemize}
+2 - Indicates a totally unpersuasive argument body.
+\begin{itemize}
+\item \textit{MajorClaim} \\ All of the supporting claims had low
+  persuasiveness scores, and/or low relevance. There are one or more
+  strong, unrefuted Claims against it.
+\item \textit{Claim} \\ Most, if not all of the supporting premises
+  were opinions, and/or the majority of the premises had a low
+  relevance score. There are a small number of supporting
+  premises. Also, a claim will receive a score of 2 if there are too
+  many opposing, unrefuted premises.
+\end{itemize}
+
+\noindent
+A score of 1 indicates that there is no argument body for the given entity.
+\begin{itemize}
+\item \textit{MajorClaim} - No supporting claims.
+\item \textit{Claim} - No supporting premises.
+\end{itemize}
+
+\pagebreak
+
+\section{Example Walkthrough}
+\label{sec:example-walkthrough}
+% TODO: Step by step annotation of an example essay
+
+% \section{References}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
